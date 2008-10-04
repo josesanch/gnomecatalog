@@ -1,0 +1,26 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Gnome Catalog
+Name[fr]=Catalogueur de disques
+Name[de]=Cd-Rom-Katalogprogramm
+Name[nl]=Gnome Schijvencatalogus
+Name[hu]=Katalógusprogram GNOME alá
+Name[pl]=Katalog dysków CD dla Gnome
+Name[cs]=GNOME katalog
+Comment=make disk/CD catalogs
+Comment[fr]=Faites vos catalogues de disques/CD
+Comment[de]=Erstellung von Platten-/CD-Katalogen
+Comment[nl]=Maakt catalogen van uw schijven
+Comment[hu]=Meghajtó és CD katalógusokat készít
+Comment[pl]=Aplikacja katalogująca dyski CD (i nie tylko)
+Comment[cs]=Program pro katalogizaci CD disků
+TryExec=gnomecatalog
+Exec=gnomecatalog %F
+Icon=/usr/share/gnomecatalog/pixmaps/gcatalog.png
+Terminal=false
+Type=Application
+Categories=GNOME;Application;Utility;
+MimeType=application/x-gcatalog;
+Name[es_ES]=Catalogador de Gnome
+Comment[es_ES]=Cataloga tus CD / DVDs y archivos

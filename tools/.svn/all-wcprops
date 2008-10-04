@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svnroot/gnomecatalog/!svn/ver/1/tools
+END
+rpm-install
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svnroot/gnomecatalog/!svn/ver/1/tools/rpm-install
+END
+rpm-post-install
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svnroot/gnomecatalog/!svn/ver/1/tools/rpm-post-install
+END

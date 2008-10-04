@@ -1,0 +1,65 @@
+8
+
+dir
+11
+https://gnomecatalog.svn.sourceforge.net/svnroot/gnomecatalog/share/glade
+https://gnomecatalog.svn.sourceforge.net/svnroot/gnomecatalog
+
+
+
+2008-01-22T22:22:34.923373Z
+11
+josesanch
+
+
+svn:special svn:externals svn:needs-lock
+
+gcatalog.png
+file
+
+
+
+
+2008-01-11T09:09:22.000000Z
+43f6c7b9d3bdb88f1ec9d3def45d59c3
+2008-01-22T22:22:34.923373Z
+11
+josesanch
+has-props
+
+gnomecatalog (copia).glade
+file
+
+
+
+
+2008-01-11T09:09:25.000000Z
+c950ec15c3e63ab2a8d528f94ee705de
+2008-01-22T22:22:34.923373Z
+11
+josesanch
+
+gnomecatalog.glade
+file
+13
+
+
+
+2008-02-02T11:19:46.000000Z
+f0ea41e684dcde5087a8d2300f9e502f
+2008-02-02T16:41:32.040572Z
+13
+josesanch
+
+dialogs.glade
+file
+
+
+
+
+2008-01-13T08:52:51.000000Z
+6b67db3388a87757b49396585dc337d2
+2008-01-22T22:22:34.923373Z
+11
+josesanch
+

@@ -1,0 +1,12 @@
+Comments on disks and catalogs
+Implements borrowed feature
+--Esta línea y las que están debajo serán ignoradas--
+
+M    share/glade/dialogs.glade
+M    src/lib/gnomecatalog/data.py
+M    src/lib/gnomecatalog/fstypes.py
+M    src/lib/gnomecatalog/storage.py
+M    src/lib/gnomecatalog/ui/treeviews.py
+M    src/lib/gnomecatalog/ui/app.py
+M    src/lib/gnomecatalog/ui/dialogs.py
+M    README

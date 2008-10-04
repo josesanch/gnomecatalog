@@ -1,0 +1,5 @@
+#export GCONF_CONFIG_SOURCE=$(gconftool-2 --get-default-source)
+#SCHEMAS="straw.schemas"
+#for S in $SCHEMAS; do
+#  gconftool-2 --makefile-install-rule /etc/gconf/schemas/$S > /dev/null || :
+#done

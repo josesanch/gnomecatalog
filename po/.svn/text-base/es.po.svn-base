@@ -1,0 +1,289 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-01-07 23:58+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: José Sánchez Moreno <jose@o2w.es>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#: ../share/glade/dialogs.glade.h:1
+msgid "<b>Categories</b>"
+msgstr "<b>Categorías</b>"
+
+#: ../share/glade/dialogs.glade.h:2
+msgid "<b>Comment</b>"
+msgstr "<b>Comentario</b>"
+
+#: ../share/glade/dialogs.glade.h:3
+msgid "<b>Rating</b>"
+msgstr "<b>Ratio</b>"
+
+#: ../share/glade/dialogs.glade.h:4
+msgid "<b>Save the changes?</b>"
+msgstr "<b>¿Desea guardar los cambios?</b>"
+
+#: ../share/glade/dialogs.glade.h:5
+msgid "Add new disk"
+msgstr "Añadir nuevo disco"
+
+#: ../share/glade/dialogs.glade.h:6
+msgid "Categories, Comments"
+msgstr "Categorías y comentarios"
+
+#: ../share/glade/dialogs.glade.h:7 ../share/glade/dialogs.glade.h:5
+msgid "Category"
+msgstr "Categoría"
+
+#: ../share/glade/dialogs.glade.h:8 ../share/glade/dialogs.glade.h:6
+msgid "Close _without save"
+msgstr "Cerrar _sin guardar"
+
+#: ../share/glade/dialogs.glade.h:9 ../share/glade/dialogs.glade.h:7
+msgid "Eject disk after disk read"
+msgstr "Expulsar disco después de su lectura"
+
+#: ../share/glade/dialogs.glade.h:10
+msgid "File information"
+msgstr "Información de archivo"
+
+#: ../share/glade/dialogs.glade.h:11 ../share/glade/dialogs.glade.h:8
+msgid "If don't save the changes will be lost."
+msgstr "Si no guarda ahora los cambios se perderán."
+
+#: ../share/glade/dialogs.glade.h:12 ../share/glade/dialogs.glade.h:9
+msgid "Importing data from disk. Please <b>wait a moment</b>........."
+msgstr "Importando datos. Por favor <b>espere un momento</b>......"
+
+#: ../share/glade/dialogs.glade.h:13
+msgid "Importing disk"
+msgstr "Importando disco"
+
+#: ../share/glade/dialogs.glade.h:14 ../share/glade/dialogs.glade.h:10
+msgid "Nombre del archivo.avi"
+msgstr "nombre del archivo"
+
+#: ../share/glade/dialogs.glade.h:15
+msgid "Preferences"
+msgstr "Preferencias"
+
+#: ../share/glade/dialogs.glade.h:16
+msgid "Save dialog"
+msgstr "Guardar"
+
+#: ../share/glade/dialogs.glade.h:17 ../share/glade/dialogs.glade.h:11
+msgid "Save thumbnails in the database"
+msgstr "Guardar los thumbnails en la base de datos"
+
+#: ../share/glade/dialogs.glade.h:18
+msgid "Seleccione un directorio"
+msgstr "Seleccione un directorio"
+
+#: ../share/glade/dialogs.glade.h:19 ../share/glade/dialogs.glade.h:12
+msgid "Select path to read"
+msgstr "Seleccione la ruta a leer"
+
+#: ../share/glade/dialogs.glade.h:20
+msgid "gnome Catalog"
+msgstr "Gnome catalog"
+
+#: ../share/glade/gnomecatalog.glade.h:1
+msgid "Catalog"
+msgstr "Catálogo"
+
+#: ../share/glade/gnomecatalog.glade.h:2 lib/gnomecatalog/ui/app.py:43
+#: lib/gnomecatalog/ui/dialogs.py:157 lib/gnomecatalog/ui/app.py:46
+#: ../share/glade/gnomecatalog.glade.h:1
+msgid "Categories"
+msgstr "Categorí­as"
+
+#: ../share/glade/gnomecatalog.glade.h:3
+msgid "Disk"
+msgstr "Disco"
+
+#: ../share/glade/gnomecatalog.glade.h:4
+msgid "New _Catalog"
+msgstr "Nuevo _Catálogo"
+
+#: ../share/glade/gnomecatalog.glade.h:5
+msgid "New _Disk"
+msgstr "Nuevo _disco"
+
+#: ../share/glade/gnomecatalog.glade.h:6
+msgid "Rename"
+msgstr "Renombrar"
+
+#: ../share/glade/gnomecatalog.glade.h:7
+msgid "_Edit"
+msgstr "_Editar"
+
+#: ../share/glade/gnomecatalog.glade.h:8 ../share/glade/gnomecatalog.glade.h:9
+msgid "_File"
+msgstr "_Archivo"
+
+#: ../share/glade/gnomecatalog.glade.h:9
+#: ../share/glade/gnomecatalog.glade.h:10
+msgid "_Help"
+msgstr "_Ayuda"
+
+#: ../share/glade/gnomecatalog.glade.h:10
+#: ../share/glade/gnomecatalog.glade.h:12
+msgid "_Properties"
+msgstr "_Propiedades"
+
+#: ../share/glade/gnomecatalog.glade.h:11
+#: ../share/glade/gnomecatalog.glade.h:13
+msgid "_View"
+msgstr "_Ver"
+
+#: lib/gnomecatalog/ui/dialogs.py:13 lib/gnomecatalog/ui/dialogs.py:355
+#: lib/gnomecatalog/ui/dialogs.py:386 lib/gnomecatalog/ui/dialogs.py:396
+msgid "Open database"
+msgstr "Abrir"
+
+#: lib/gnomecatalog/ui/dialogs.py:22 lib/gnomecatalog/ui/dialogs.py:52
+#: lib/gnomecatalog/ui/dialogs.py:84 lib/gnomecatalog/ui/dialogs.py:370
+#: lib/gnomecatalog/ui/dialogs.py:407 lib/gnomecatalog/ui/dialogs.py:417
+msgid "Gnome Catalog Files"
+msgstr "Archivos Gnome catalog"
+
+#: lib/gnomecatalog/ui/dialogs.py:27 lib/gnomecatalog/ui/dialogs.py:57
+#: lib/gnomecatalog/ui/dialogs.py:89 lib/gnomecatalog/ui/dialogs.py:375
+#: lib/gnomecatalog/ui/dialogs.py:412 lib/gnomecatalog/ui/dialogs.py:376
+#: lib/gnomecatalog/ui/dialogs.py:422
+msgid "All files"
+msgstr "Todos"
+
+#: lib/gnomecatalog/ui/dialogs.py:43
+msgid "New database"
+msgstr "Nuevo"
+
+#: lib/gnomecatalog/ui/dialogs.py:75
+msgid "Save as"
+msgstr "Guardar como"
+
+#: lib/gnomecatalog/ui/dialogs.py:92
+msgid "Don't save thumbnails."
+msgstr "No guardar los thumbnails"
+
+#: lib/gnomecatalog/ui/dialogs.py:132
+msgid "Type"
+msgstr "Tipo"
+
+#: lib/gnomecatalog/ui/dialogs.py:133 lib/gnomecatalog/ui/treeviews.py:145
+#: lib/gnomecatalog/ui/treeviews.py:148 lib/gnomecatalog/ui/treeviews.py:151
+msgid "Size"
+msgstr "Tamaño"
+
+#: lib/gnomecatalog/ui/dialogs.py:222 lib/gnomecatalog/ui/dialogs.py:223
+msgid "New category"
+msgstr "Nueva categoría"
+
+#: lib/gnomecatalog/ui/treeviews.py:15
+msgid "Disks"
+msgstr "Discos"
+
+#: lib/gnomecatalog/ui/treeviews.py:133 lib/gnomecatalog/ui/treeviews.py:136
+#: lib/gnomecatalog/ui/treeviews.py:139
+msgid "Files"
+msgstr "Archivos"
+
+#: lib/gnomecatalog/ui/treeviews.py:150 lib/gnomecatalog/ui/treeviews.py:153
+#: lib/gnomecatalog/ui/treeviews.py:156
+msgid "Rating"
+msgstr "Ratio"
+
+#: lib/gnomecatalog/data.py:92 lib/gnomecatalog/data.py:102
+#: lib/gnomecatalog/data.py:97 lib/gnomecatalog/data.py:59
+#: lib/gnomecatalog/data.py:105
+msgid "files"
+msgstr "archivos"
+
+#: lib/gnomecatalog/data.py:97 lib/gnomecatalog/data.py:110
+#: lib/gnomecatalog/data.py:105 lib/gnomecatalog/data.py:113
+msgid "Searching..."
+msgstr "Buscando..."
+
+#: lib/gnomecatalog/data.py:121 lib/gnomecatalog/data.py:150
+#: lib/gnomecatalog/data.py:145 lib/gnomecatalog/data.py:153
+msgid "No name"
+msgstr "Sin nombre"
+
+#: lib/gnomecatalog/storage.py:73 lib/gnomecatalog/storage.py:144
+msgid "Movies"
+msgstr "Pelí­culas"
+
+#: lib/gnomecatalog/storage.py:73 lib/gnomecatalog/storage.py:144
+msgid "Audio"
+msgstr "Sonido"
+
+#: lib/gnomecatalog/storage.py:73 lib/gnomecatalog/storage.py:144
+msgid "Pictures"
+msgstr "Imágenes"
+
+#: lib/gnomecatalog/storage.py:73 lib/gnomecatalog/storage.py:144
+msgid "Documents"
+msgstr "Documentos"
+
+#: ../share/glade/gnomecatalog.glade.h:8
+msgid "_Export"
+msgstr "_Exportar"
+
+#: ../share/glade/gnomecatalog.glade.h:11
+msgid "_Import"
+msgstr "_Importar"
+
+#: lib/gnomecatalog/ui/app.py:46
+msgid "File types"
+msgstr "Tipos de archivo"
+
+#: lib/gnomecatalog/ui/app.py:55
+msgid "Audio files"
+msgstr "Archivos de sonido"
+
+#: lib/gnomecatalog/ui/app.py:55
+msgid "Image files"
+msgstr "Archivos de imágenes"
+
+#: lib/gnomecatalog/ui/app.py:55
+msgid "Text files"
+msgstr "Archivos de texto"
+
+#: lib/gnomecatalog/reader.py:59 lib/gnomecatalog/reader.py:73
+#: lib/gnomecatalog/reader.py:88
+msgid "Importando "
+msgstr "Importando"
+
+#: lib/gnomecatalog/ui/app.py:55
+msgid "Video files"
+msgstr "Archivos de video"
+
+#: lib/gnomecatalog/ui/dialogs.py:398 lib/gnomecatalog/ui/dialogs.py:408
+msgid "Select file type"
+msgstr "Seleccionar tipo de fichero"
+
+#: gnomecatalog.py:35
+msgid "Translators credits"
+msgstr "José Sánchez Moreno (2007)"
+
+#: ../share/glade/gnomecatalog.glade.h:2
+msgid "Export"
+msgstr "Exportar"
+
+#: ../share/glade/gnomecatalog.glade.h:3 lib/gnomecatalog/ui/dialogs.py:355
+msgid "Export database"
+msgstr "Exportar base de datos"

@@ -1,0 +1,6 @@
+To install
+python setup.py install
+
+To run
+execute ./gnomecatalog
+in src directory

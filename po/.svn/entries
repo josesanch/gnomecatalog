@@ -1,0 +1,52 @@
+8
+
+dir
+11
+https://gnomecatalog.svn.sourceforge.net/svnroot/gnomecatalog/po
+https://gnomecatalog.svn.sourceforge.net/svnroot/gnomecatalog
+
+
+
+2008-01-22T22:22:34.923373Z
+11
+josesanch
+
+
+svn:special svn:externals svn:needs-lock
+
+en.po
+file
+
+
+
+
+2008-01-27T10:56:23.000000Z
+99f5b0b270d2492f5cd56d2e175dff3d
+2008-01-22T22:22:34.923373Z
+11
+josesanch
+
+es.po
+file
+
+
+
+
+2008-01-27T10:56:23.000000Z
+2b0f746f856a14da401d234514291232
+2008-01-22T22:22:34.923373Z
+11
+josesanch
+
+pl.po
+file
+
+
+
+
+2008-01-27T10:56:23.000000Z
+98d2e6e2366d794a88f915763e9d42c9
+2008-01-22T22:22:34.923373Z
+11
+josesanch
+

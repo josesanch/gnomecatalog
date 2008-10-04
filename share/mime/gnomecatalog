@@ -1,0 +1,1 @@
+application/x-gcatalog; gnomecatalog '%s'; description="Gnome Catalog File"; test=test -n "$DISPLAY"; nametemplate=%s.gcatalog

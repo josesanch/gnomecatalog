@@ -1,0 +1,12 @@
+recursive-include src/lib *.py
+include src/gnomecatalog
+recursive-include po *.po Makefile POTFILES.in POTFILES.skip
+recursive-include share *
+recursive-include test *.py
+recursive-include po *.mo
+recursive-include tools *.py rpm-*
+include ChangeLog
+include setup.py setup.cfg
+include README LICENSE TODO NEWS
+global-exclude *.id =id
+

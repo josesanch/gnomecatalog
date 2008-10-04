@@ -1,0 +1,40 @@
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+import string, os, sys, time, locale
+import gtk, gtk.glade, gnome
+import  threading
+
+
+#def find_lib():
+#	h, t = os.path.split(os.path.split(os.path.abspath(sys.argv[0]))[0])
+#	return os.path.join(h, t, "..")
+
+#sys.path.insert(0, find_lib())
+
+from gnomecatalog import GnomecatalogApp
+
+
+
+DIR = None
+APP = "gnomecatalog"
+
+import locale
+import gettext
+locale.setlocale(locale.LC_ALL, '')
+gettext.bindtextdomain(APP, DIR)
+gettext.textdomain(APP)
+gettext.install(APP, DIR, unicode=1)
+gtk.glade.bindtextdomain (APP, "/usr/share/locale")
+#gtk.glade.bindtextdomain (APP, "/home/jose/Escritorio/gnomecatalog/po")
+gtk.glade.textdomain (APP)
+
+
+app_name = "Gnome Catalog"
+app_version = '0.3.4'
+app_authors = ["José Sánchez Moreno <jose@o2w.es>"]
+app_translators = _("Translators credits")
+gnome_program = gnome.program_init(app_name, app_version)
+
+if __name__ == "__main__":
+	app = GnomecatalogApp()
+	app.run()

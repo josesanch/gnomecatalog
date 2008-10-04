@@ -1,0 +1,4 @@
+2008-02-18 José Sánchez Moreno <jose at o2w es>
+
+	* Starting to write modes.py to abstract the use of the database.
+	* Starting to code the info panel at the right that shows information about files, ratings and comments.

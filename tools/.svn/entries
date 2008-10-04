@@ -1,0 +1,40 @@
+8
+
+dir
+8
+https://gnomecatalog.svn.sourceforge.net/svnroot/gnomecatalog/tools
+https://gnomecatalog.svn.sourceforge.net/svnroot/gnomecatalog
+
+
+
+2008-01-12T10:22:51.212961Z
+1
+josesanch
+
+
+svn:special svn:externals svn:needs-lock
+
+rpm-install
+file
+
+
+
+
+2008-01-11T09:08:29.000000Z
+ca57aee5f313b04e236f2af80a9f4d3a
+2008-01-12T10:22:51.212961Z
+1
+josesanch
+
+rpm-post-install
+file
+
+
+
+
+2008-01-11T09:08:26.000000Z
+0d5f6fcee4a23d5c893dfd41f6bf034e
+2008-01-12T10:22:51.212961Z
+1
+josesanch
+

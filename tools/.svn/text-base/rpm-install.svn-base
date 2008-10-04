@@ -1,0 +1,4 @@
+export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
+python setup.py install --prefix=/usr  --root=$RPM_BUILD_ROOT --record=INSTALLED_FILES
+
+

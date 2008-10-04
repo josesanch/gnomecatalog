@@ -1,0 +1,76 @@
+8
+
+dir
+9
+https://gnomecatalog.svn.sourceforge.net/svnroot/gnomecatalog/gnomecatalog/ui
+https://gnomecatalog.svn.sourceforge.net/svnroot/gnomecatalog
+
+
+
+2008-01-22T22:19:01.907366Z
+9
+josesanch
+
+
+svn:special svn:externals svn:needs-lock
+
+treeviews.py
+file
+
+
+
+
+2008-01-27T10:56:18.000000Z
+06d0630454ac5b63ce57800061a476cd
+2008-01-22T22:19:01.907366Z
+9
+josesanch
+
+__init__.py
+file
+
+
+
+
+2008-01-27T10:56:18.000000Z
+e1c06d85ae7b8b032bef47e42e4c08f9
+2008-01-22T22:19:01.907366Z
+9
+josesanch
+
+app.py
+file
+13
+
+
+
+2008-02-01T08:09:44.000000Z
+b5c6fafc5039d84ce15b4d3894b3f5b8
+2008-02-02T16:41:32.040572Z
+13
+josesanch
+
+dialogs.py
+file
+12
+
+
+
+2008-01-26T18:04:47.000000Z
+5a6f9efbc11f95a57d256ff30f08fabd
+2008-01-28T07:27:38.797729Z
+12
+josesanch
+
+gladeconnect.py
+file
+12
+
+
+
+2008-01-27T10:56:22.000000Z
+5e2730c11580c0b1740e23570b9f91b5
+2008-01-28T07:27:38.797729Z
+12
+josesanch
+

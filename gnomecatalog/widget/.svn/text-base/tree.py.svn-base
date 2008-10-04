@@ -1,0 +1,138 @@
+# -*- coding: UTF-8 -*-
+import gtk, pango
+
+class ColumnText(gtk.TreeViewColumn):
+	def __init__(self, name, ncol):
+		r = gtk.CellRendererText()
+		r.set_property("ellipsize",pango.ELLIPSIZE_END)
+		gtk.TreeViewColumn.__init__(self,name,r,markup=ncol)
+		self.set_expand(True)
+		self.set_sizing(gtk.TREE_VIEW_COLUMN_AUTOSIZE)
+
+class Column(gtk.TreeViewColumn):
+	def __init__(self, name, ncolumn, size = None, expand = False):
+		gtk.TreeViewColumn.__init__(self, name)
+		r = gtk.CellRendererText()
+		r.set_property("xalign", 0)
+		r.set_property("ellipsize", pango.ELLIPSIZE_END)
+		self.pack_start(r, expand = True)
+		self.add_attribute(r, "markup", ncolumn)
+		self.set_resizable(True)
+		self.set_clickable(True)
+		self.set_reorderable(True)
+		if size:
+			self.set_min_width(size)
+		self.set_expand(expand)
+
+class ColumnPixbuf(gtk.TreeViewColumn):
+	def __init__(self,name,ncol):
+		r = gtk.CellRendererPixbuf()
+		gtk.TreeViewColumn.__init__(self,name,r,pixbuf=ncol)
+
+class ColumnPixbufText(gtk.TreeViewColumn):
+	def __init__(self,name, pcol, tcol):
+		r = gtk.CellRendererPixbuf()
+		t = gtk.CellRendererText()
+		t.set_property("ellipsize",pango.ELLIPSIZE_END)
+		gtk.TreeViewColumn.__init__(self,name)
+		self.pack_start(r, False)
+		self.set_attributes(r, pixbuf=pcol)
+		self.pack_start(t)
+		self.set_attributes(t, markup=tcol)
+		self.set_expand(True)
+
+class Disks(gtk.TreeView):
+	def __init__(self, files):
+		gtk.TreeView.__init__(self)
+
+		self.set_rules_hint(True)	# Alternal el color de las filas
+#		self.set_headers_visible(False)
+
+		self.connect("row-activated", self.__row_activated)
+		self.connect("row-expanded", self.__row_expanded)
+		self.connect("cursor-changed", self.__cursor_changed)
+
+
+		self.files = files
+		self.model = gtk.TreeStore(object, gtk.gdk.Pixbuf, str)
+
+		self.append_column(ColumnPixbufText(_("Disk"), 1, 2))
+#		self.append_column(Column(_("Disks"), 2))
+		self.set_search_column(2)
+		self.set_model(self.model)
+		self.show()
+
+
+	def __row_activated(self, widget, iter, path):
+		print widget, iter, path,
+
+
+	def __cursor_changed(self, widget):
+		(model, iter) = self.get_selection().get_selected()
+		item = model[iter][0]
+		self.files.set_data(item.files)
+
+	def show_files(self):
+		self.__cursor_changed(self)
+
+	def __row_expanded(self, widget, iter, path):
+
+		iter = self.model.iter_children(iter)
+
+		while True:
+			if not self.model.iter_children(iter):
+				item = self.model[iter][0]
+				print item.name
+				for dir in item.dirs:
+					self.model.append(iter, [dir, dir.get_icon(), dir.name])
+
+			iter = self.model.iter_next(iter)
+			if not iter: break
+
+
+	def set_data(self, items):
+		self.set_model(None)
+		self.model.clear()
+		for item in items:
+			iter = self.model.append(None, [item, item.get_icon(), item.name])
+			for jitem in item.dirs:
+				self.model.append(iter, [jitem, jitem.get_icon(), jitem.name])
+
+		self.set_model(self.model)
+
+
+class Files(gtk.TreeView):
+	forecolor = '#606060'
+	def __init__(self):
+
+		gtk.TreeView.__init__(self)
+		self.set_rules_hint(True)	# Alternal el color de las filas
+		self.set_headers_visible(True)
+		self.model = gtk.ListStore(object, gtk.gdk.Pixbuf, str, str,  gtk.gdk.Pixbuf)
+		self.append_column(ColumnPixbufText(_("Files"), 1, 2))
+
+		self.append_column(Column(_("Size"), 3, 100))
+		self.append_column(Column(_("Rating"), 4))
+		self.set_model(self.model)
+		self.show()
+
+	def set_data(self, items):
+		self.set_model(None)
+
+		self.model.clear()
+		for item in items:
+			self.model.append([item, item.get_icon(), self.__item_text(item), "<span foreground=\""+ self.forecolor +"\"><small>"  + item.get_size() + "</small></span>", None])
+		self.set_model(self.model)
+
+	def __item_text(self, item, search = False):
+		text = item.name
+		if search:
+			text = text + "\n<span foreground=\""+ self.color +"\"><small><b>" + item.get_location() + "</b></small></span>"
+
+		if item.comment: text = text + "\n<span foreground=\""+ self.forecolor +"\"><small>" + item.comment + "</small></span>"
+
+		if not item.is_dir():
+			duration = item.get_duration()
+			if duration:
+				text = text + "<span foreground=\""+ self.forecolor +"\"><small>     (" +  duration + ")</small></span>"
+		return text
