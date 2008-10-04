@@ -1,7 +1,0 @@
-
---Esta línea y las que están debajo serán ignoradas--
-
-M    src/lib/gnomecatalog/storage.py
-D    src/lib/gnomecatalog/importdata.py
-M    src/lib/gnomecatalog/ui/app.py
-M    src/lib/gnomecatalog/ui/dialogs.py
