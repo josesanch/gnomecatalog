@@ -6,10 +6,6 @@ import string, sys
 import utils
 import fstypes, urllib
 
-import fileinfo
-from models import *
-import threading
-from time import sleep
 
 class Reader:
 	""" Lector de ficheros """
@@ -29,7 +25,6 @@ class Reader:
 
 	def read(self, uri, progress = None, recursive = None):
 		pos = 0; files = []; dirs = [];
-		finfo = fileinfo.Info()
 		""" La primera vez que se llama """
 		try:
 			path = gnomevfs.get_local_path_from_uri(uri)
@@ -43,15 +38,12 @@ class Reader:
 			self.count_files = 1;	self.position = 0;	self.root = path
 
 			""" Creamos un nuevo disco """
-			utils.get_drive_icon(str(path)).save('/tmp/gnomecatalog_icon_disk.png', 'png')
-			data = open('/tmp/gnomecatalog_icon_disk.png', 'rb').read()
-			self.disk = Disks({'name' : utils.get_label(path), 'volname' : utils.get_label(path), 'root' : path, 'icon' : buffer(data) })
-			self.disk.save()
+			self.disk = fstypes.Disk(utils.get_label(path), path, None, None, 0, utils.get_drive_icon(str(path)))
 
 			""" Contamos los archivos primero, para luego poder poner el progreso """
 			self.count_files = self.dir_count(uri)
-			self.path = path
-			self.timeout_handler_id = gobject.timeout_add(150, self.update_progress_bar)
+			gobject.timeout_add(500, self.update_progress_bar)
+
 
 		for info in gnomevfs.DirectoryHandle(uri):
 			if(self._cancel_import_disk):
@@ -65,29 +57,21 @@ class Reader:
 
 			pathfile = uri + "/" +  urllib.pathname2url(info.name)
 			self.path = pathfile
-			#file = fstypes.File(pathfile, self.disk)
+			file = fstypes.File(pathfile, self.disk)
+			if info.type and info.type == 2:
+				file.add_files(self.read(pathfile, None, True))	# Directory
 
-			path , name, size, type, mime, meta, date = finfo.get(pathfile)
-			file = Files({'name' : name, 'size' : str(size), 'type' : type, 'mime' : str(mime),  'date' : str(date), 'idparent' : '0' })
-			file.save()
-
-			while gtk.events_pending():
-				gtk.main_iteration()
+			files.append(file)
 
 			if not recursive:
 				self.disk.add(file)
 
-			if info.type and info.type == 2:
-				file.add(self.read(pathfile, None, True))	# Directory
-
-			files.append(file)
 
 		if(self._cancel_import_disk):
 			return None
 
 		if not recursive:
 			self.progress_bar = None
-			self.disk.commit()
 			return self.disk
 		else:
 			return files

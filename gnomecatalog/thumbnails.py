@@ -9,7 +9,6 @@ class Thumb:
 		self.database = database
 		self.thumbnails_dir = database + "_thumbs"
 
-
 	def get_pixbuf(self, idfile):
 		if self.exists(idfile):
 			return gtk.gdk.pixbuf_new_from_file_at_size(self.get_path(idfile), self.size, self.size)

@@ -36,7 +36,7 @@ src/lib/gnomecatalog/config.py
 src/lib/gnomecatalog/data.py
 src/lib/gnomecatalog/fileinfo.py
 src/lib/gnomecatalog/fstypes.py
-src/lib/gnomecatalog/models.py
+src/lib/gnomecatalog/importdata.py
 src/lib/gnomecatalog/reader.py
 src/lib/gnomecatalog/storage.py
 src/lib/gnomecatalog/thumbnails.py

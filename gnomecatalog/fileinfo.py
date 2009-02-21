@@ -7,13 +7,7 @@
 #import gst
 #import EXIF
 #import mmpython
-try: import kaa.metadata
-except: has_kaa = False
-else: has_kaa = True
-
-try: import mmpython
-except: has_mmpython = False
-else: has_mmpython = True
+import kaa.metadata
 
 import gnomevfs, os, string, sys, urllib
 
@@ -24,14 +18,11 @@ class Info:
 		meta = {}
 		img = None
 #		print  "FILEINFO: " + file
-		file_path, file_name, file_type, file_size, file_mime, file_mtime = self.__stat(file)
+		file_path, file_name, file_type, file_size, file_mime = self.__stat(file)
 		try:
 			path = urllib.url2pathname(str(file))[7:]
 #			path = file
-			if has_kaa:
-				meta = self.__kaa(path)
-			elif has_mmpython:
-				meta = self.__mmpython(path)
+			meta = self.__kaa(path)
 			#if file_mime == "image/jpeg":
 			#	meta = self.__image(file)
 			#else:
@@ -39,7 +30,7 @@ class Info:
 
 		except: pass
 #		print meta
-		return file_path, file_name, file_size, file_type, file_mime, meta, file_mtime
+		return file_path, file_name, file_size, file_type, file_mime, meta
 
 
 	def __kaa(self, filename):
@@ -152,11 +143,10 @@ class Info:
 #			print 'Size:	  ', file_size
 
 		mime_type = '(none)'
-
 		try: mime_type = file_info.mime_type
 		except: pass
 		#print 'Mime type: ', mime_type
-		return file_uri, file_info.name, file_type, file_size, mime_type, file_info.mtime
+		return file_uri, file_info.name, file_type, file_size, mime_type
 
 
 	def _discovered_cb(self, discoverer, ismedia):

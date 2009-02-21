@@ -299,7 +299,7 @@ class Sqlite:
 
 
 	def __insert_file(self, iddisk, idparent, file):
-		self.__sql( "INSERT into files (id, iddisk, idparent, name, size, path, mime, date, type) values (NULL, " + str( iddisk ) +", " + str( idparent ) + " ,'" + self._check(file.name) + "', " + str( file.size ) + ", '" +  self._check(file.path) + "', '" + file.mime + "', '" + str(file.date) + "', '" + str( file.type ) + "')" )
+		self.__sql( "INSERT into files (id, iddisk, idparent, name, size, path, mime, type) values (NULL, " + str( iddisk ) +", " + str( idparent ) + " ,'" + self._check(file.name) + "', " + str( file.size ) + ", '" +  self._check(file.path) + "', '" + file.mime + "', '" + str( file.type ) + "')" )
 		idfile =  self.cursor.lastrowid;
 
 		""" Insetamos los metadatos del fichero """

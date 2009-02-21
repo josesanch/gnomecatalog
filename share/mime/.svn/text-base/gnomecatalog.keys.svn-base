@@ -1,4 +1,0 @@
-application/x-gcatalog
-	open=gnomecatalog %f
-	view=gnomecatalog %f
-	icon-filename=/usr/share/gnomecatalog/pixmaps/gcatalog.png

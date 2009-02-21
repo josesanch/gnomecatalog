@@ -1,12 +1,9 @@
 # -*- coding: UTF-8 -*-
 import sys, gtk, pprint, os, gobject, threading, pango
 from gnomecatalog import config, utils, data
-from gnomecatalog.widget.panel import Information_panel
-from gnomecatalog.widget import tree
 
 from gladeconnect import GladeConnect
 import dialogs
-
 
 try: import sexy
 except: has_sexy = False
@@ -21,16 +18,9 @@ class App(GladeConnect):
 
 		gobject.threads_init()
 		self.app_info = app_info
-		self.mainApp.set_icon_from_file(utils.locate_file("gcatalog.png"))
 
 		self.config = config.Config()
-
-		self.treeDisks = tree.Disks()
-		self.scrolledwindow_disks.add_with_viewport(self.treeDisks)
-
-		self.data = data.Data(self.treeDisks, self.treeviewFiles, self)
-		#self.data = data.Data(self.treeviewDisk, self.treeviewFiles, self)
-
+		self.data = data.Data(self.treeviewDisk, self.treeviewFiles, self)
 		self.toolbutton_add.set_menu(self.menu_toolbar_add);
 
 		if len(sys.argv) > 1:
@@ -52,25 +42,6 @@ class App(GladeConnect):
 		self.config.save("height", size[1])
 		self.config.save("left", pos[0])
 		self.config.save("top", pos[1])
-
-	def restore_state(self):
-		self.create_search_entry()
-		self.create_progress_bar()
-		self.reload_categories()
-		self.mainApp.move(int(self.config.get("left")), int(self.config.get("top")))
-		self.mainApp.resize(int(self.config.get("width")), int(self.config.get("height")))
-
-		# Creation of the information panel
-		self.information_panel = Information_panel()
-		self.information_panel.show()
-		self.vbox_information.pack_end(self.information_panel)
-
-		self.hpaned2.get_child2().set_size_request(200, -1)
-#		self.hpaned1.get_child1().set_size_request(100, -1)
-		self.hpaned1.set_position(100)
-#		self.hpaned2.set_position(int(self.config.get("width")) - 250)
-		self.mainApp.show()
-
 
 
 	def reload_categories(self):
@@ -105,6 +76,15 @@ class App(GladeConnect):
 		#if not self.combobox_categories.get_active() == 0:
 		#	return self.combobox_categories.get_active_text()
 		#return None
+
+	def restore_state(self):
+		self.create_search_entry()
+		self.create_progress_bar()
+		self.mainApp.move(int(self.config.get("left")), int(self.config.get("top")))
+		self.mainApp.resize(int(self.config.get("width")), int(self.config.get("height")))
+		self.reload_categories()
+		self.mainApp.show()
+
 
 	def create_progress_bar(self):
 		self.hbox_import = gtk.HBox()
@@ -245,10 +225,6 @@ class App(GladeConnect):
 		#print widget, iter, column
 		#self.data.clickOnFiles(iter)
 
-	def on_treeviewFiles_cursor_changed(self, widget):
-		selected = self.data.treeFiles.get_selected_files()
-		self.information_panel.info(selected[0])
-#		self.data.show_information()
 
 	#####################################
 	# ACCIONES DEL MENU

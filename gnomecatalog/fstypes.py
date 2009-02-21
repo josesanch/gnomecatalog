@@ -218,7 +218,7 @@ class File(FstypeBase):
 		if type(info) == str:
 			self._data_loaded = True
 			finfo = fileinfo.Info()
-			self.path , self.name, self.size, self.type, self.mime, self.meta, self.date = finfo.get(info)
+			self.path , self.name, self.size, self.type, self.mime, self.meta = finfo.get(info)
 
 
 		if type(info) == dict:
@@ -229,7 +229,6 @@ class File(FstypeBase):
 			self.size = info["size"]
 			self.type = info["type"]
 			self.mime = info["mime"]
-			self.date = info["date"]
 			self.iddisk = info["iddisk"]
 			self.db	 = db
 			self.id   = info["id"]

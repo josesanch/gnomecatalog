@@ -1,8 +1,8 @@
 # -*- coding: UTF-8 -*-
 import gtk, gnome, gnome.ui
 import string, os
-import utils
-from ui.gladeconnect import GladeConnect
+from gnomecatalog import utils
+from gnomecatalog.ui.gladeconnect import GladeConnect
 
 
 #####################################
@@ -430,6 +430,7 @@ class Export(gtk.FileChooserDialog):
 
 		elif response == gtk.RESPONSE_CANCEL:
 			self.destroy()
+
 
 
 

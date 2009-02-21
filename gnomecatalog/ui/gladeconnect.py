@@ -6,6 +6,7 @@ class GladeConnect:
 
     def __init__(self, file, signals = None):
         gtk.glade.textdomain("gnomecatalog")
+
 #	print file, utils.locate_file(file, "glade")
         self.glade = gtk.glade.XML(utils.locate_file(file, "glade"), domain = "gnomecatalog")
         self.connect(signals)

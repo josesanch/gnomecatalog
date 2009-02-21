@@ -1,7 +1,2 @@
-2008-02-18 José Sánchez Moreno <jose at o2w es>
-
-	* src/tracker-applet/tracker-applet.c: (set_progress),
-	(index_finished), (index_state_changed), (tray_icon_show_message),
-	(main):
-	* Starting to write modes.py to abstract the use of the database.
-	* Starting to code the info panel at the right that shows information about files, ratings and comments.
+Jose Sanchez Moreno <jose@o2w.es>  Fri, 11 jan 2008 12:30:00 +1000
+Initial importing
